@@ -12,7 +12,9 @@
     "build": "preconstruct build",
     "next-app": "npm -w @demo/next-app",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev:web": "npm -w @demo/next-app run dev",
+    "dev:api": "npm -w @demo/graphql-api run dev"
   },
   "dependencies": {
     "@babel/core": "7.15.5",

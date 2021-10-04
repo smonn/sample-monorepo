@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/demo-graphql-api.cjs.js",
   "scripts": {
+    "dev": "ts-node-dev --quiet src/index.ts",
     "start": "node ./dist/demo-graphql-api.cjs.js"
   },
   "dependencies": {
@@ -12,6 +13,7 @@
     "graphql-tools": "8.2.0"
   },
   "devDependencies": {
+    "ts-node-dev": "1.1.8",
     "typescript": "4.4.3"
   }
 }

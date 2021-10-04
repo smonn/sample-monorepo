@@ -1,0 +1,8 @@
+{
+  "name": "@demo/button",
+  "version": "1.0.0",
+  "description": "Very simple React button",
+  "dependencies": {
+    "react": "17.0.2"
+  }
+}

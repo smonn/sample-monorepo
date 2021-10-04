@@ -8,12 +8,12 @@ export interface ButtonProps
   isSelected?: boolean;
 }
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   children,
   isSelected = false,
   style = {},
   ...props
-}: ButtonProps) => (
+}) => (
   <button
     style={{
       backgroundColor: isSelected ? "#00c" : "#00f",

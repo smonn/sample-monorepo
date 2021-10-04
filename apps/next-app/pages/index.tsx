@@ -31,7 +31,7 @@ const Preamble = () => (
   </>
 );
 
-function HomePage() {
+const HomePage: React.FC = () => {
   const { data: authorList } = useQuery(getAuthors);
   const [getAuthor, { data }] = useLazyQuery(getAuthorDetails);
   if (!authorList) {
@@ -45,8 +45,8 @@ function HomePage() {
     >
       <Preamble />
       <h2>
-        As a treat, we've got some cool author recs Click on an author to see
-        some of their books:
+        As a treat, we&apos;ve got some cool author recs Click on an author to
+        see some of their books:
       </h2>
       <div>
         {authorList.authors.map(({ name }) => (
@@ -76,6 +76,6 @@ function HomePage() {
       </div>
     </div>
   );
-}
+};
 
 export default HomePage;

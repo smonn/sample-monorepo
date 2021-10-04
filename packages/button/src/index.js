@@ -1,9 +1,9 @@
 import React from "react";
 
-const Button = ({ children, style = {}, ...props }) => (
+const Button = ({ children, isSelected = false, style = {}, ...props }) => (
   <button
     style={{
-      backgroundColor: "#00b",
+      backgroundColor: isSelected ? "#00c" : "#00f",
       color: "#fff",
       border: 0,
       padding: 10,

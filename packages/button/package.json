@@ -2,7 +2,10 @@
   "name": "@demo/button",
   "version": "1.0.0",
   "description": "Very simple React button",
+  "main": "dist/demo-button.cjs.js",
+  "module": "dist/demo-button.esm.js",
   "dependencies": {
+    "@babel/runtime": "7.15.4",
     "react": "17.0.2"
   }
 }

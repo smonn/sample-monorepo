@@ -1,0 +1,14 @@
+{
+  "name": "@demo/graphql-api",
+  "version": "1.0.0",
+  "main": "dist/demo-graphql-api.cjs.js",
+  "scripts": {
+    "start": "node ./dist/demo-graphql-api.cjs.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.15.4",
+    "apollo-server": "3.3.0",
+    "graphql": "15.6.0",
+    "graphql-tools": "8.2.0"
+  }
+}

@@ -1,18 +1,18 @@
-import React from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps, FC } from "react";
 
-export interface ButtonProps
-  extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
+export interface ButtonProperties
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
   isSelected?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProperties> = ({
   children,
   isSelected = false,
   style = {},
-  ...props
+  ...rest
 }) => (
   <button
     style={{
@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
       borderRadius: 4,
       ...style,
     }}
-    {...props}
+    {...rest}
   >
     {children}
   </button>

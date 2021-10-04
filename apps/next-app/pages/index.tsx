@@ -1,6 +1,6 @@
 import { gql, useLazyQuery, useQuery } from "@apollo/client";
 import { Button } from "@demo/button";
-import React from "react";
+import { FC } from "react";
 
 const getAuthorDetails = gql`
   query ($name: String) {
@@ -31,7 +31,7 @@ const Preamble = () => (
   </>
 );
 
-const HomePage: React.FC = () => {
+const HomePage: FC = () => {
   const { data: authorList } = useQuery(getAuthors);
   const [getAuthor, { data }] = useLazyQuery(getAuthorDetails);
   if (!authorList) {

@@ -1,7 +1,6 @@
-import React from "react";
+import { gql, useLazyQuery, useQuery } from "@apollo/client";
 import { Button } from "@demo/button";
-import { useLazyQuery, useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
+import React from "react";
 
 const getAuthorDetails = gql`
   query ($name: String) {
@@ -33,12 +32,8 @@ const Preamble = () => (
 );
 
 function HomePage() {
-  const {
-    data: authorList,
-    initialLoading,
-    initialError,
-  } = useQuery(getAuthors);
-  const [getAuthor, { loading, error, data }] = useLazyQuery(getAuthorDetails);
+  const { data: authorList } = useQuery(getAuthors);
+  const [getAuthor, { data }] = useLazyQuery(getAuthorDetails);
   if (!authorList) {
     return null;
   }

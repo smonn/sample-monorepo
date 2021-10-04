@@ -1,5 +1,15 @@
 import { ApolloServer, gql } from "apollo-server";
 
+type Book = {
+  title: string;
+  author: Author;
+};
+
+type Author = {
+  name: string;
+  books: Book[];
+};
+
 const typeDefs = gql`
   type Query {
     authors: [Author]
@@ -29,25 +39,23 @@ const books = [
   { author: "N K Jemisin", title: "The City We Became" },
 ];
 
-const resolvers = {
-  Query: {
-    authors() {
-      return authors;
-    },
-    author(_, { name }) {
-      return authors.find((author) => author.name === name);
-    },
-  },
-  Author: {
-    books(author) {
-      return books.filter((book) => book.author === author.name);
-    },
-  },
-};
-
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
+  resolvers: {
+    Query: {
+      authors() {
+        return authors;
+      },
+      author(_, { name }: Author) {
+        return authors.find((author) => author.name === name);
+      },
+    },
+    Author: {
+      books(author: Author) {
+        return books.filter((book) => book.author === author.name);
+      },
+    },
+  },
 });
 
 server.listen().then(({ url }) => {

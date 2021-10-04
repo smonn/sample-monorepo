@@ -4,8 +4,13 @@
   "description": "Very simple React button",
   "main": "dist/demo-button.cjs.js",
   "module": "dist/demo-button.esm.js",
+  "types": "dist/declarations/src/index.d.ts",
   "dependencies": {
     "@babel/runtime": "7.15.4",
     "react": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.27",
+    "typescript": "4.4.3"
   }
 }

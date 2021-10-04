@@ -1,6 +1,19 @@
 import React from "react";
 
-const Button = ({ children, isSelected = false, style = {}, ...props }) => (
+export interface ButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  isSelected?: boolean;
+}
+
+const Button = ({
+  children,
+  isSelected = false,
+  style = {},
+  ...props
+}: ButtonProps) => (
   <button
     style={{
       backgroundColor: isSelected ? "#00c" : "#00f",

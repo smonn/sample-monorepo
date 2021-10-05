@@ -9,7 +9,7 @@
   "dependencies": {
     "@babel/runtime": "7.15.4",
     "apollo-server": "3.3.0",
-    "graphql": "15.6.0",
+    "graphql": "15.6.1",
     "graphql-tools": "8.2.0"
   },
   "devDependencies": {

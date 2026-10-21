@@ -10,7 +10,7 @@
     "react": "17.0.2"
   },
   "devDependencies": {
-    "@types/react": "17.0.27",
+    "@types/react": "17.0.93",
     "typescript": "4.4.3"
   }
 }
